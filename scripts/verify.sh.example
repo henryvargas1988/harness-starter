@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Copia este archivo a scripts/verify.sh cuando el autodetector de init.sh
+# no baste (monorepo, varios paquetes, e2e, etc.).
+#
+#   cp scripts/verify.sh.example scripts/verify.sh
+#   chmod +x scripts/verify.sh
+#
+# init.sh ejecuta scripts/verify.sh y ignora el autodetector.
+set -euo pipefail
+echo "Sustituye este ejemplo por el comando real de verificación."
+exit 1

@@ -1,0 +1,28 @@
+{
+  "project": "PENDIENTE",
+  "description": "Sustituye esta descripción por la del producto. Este repositorio es el arnés, no la aplicación.",
+  "rules": {
+    "one_feature_at_a_time": true,
+    "require_verification_to_close": true,
+    "valid_status": ["pending", "spec_ready", "in_progress", "done", "blocked"],
+    "valid_lane": ["fast", "sdd"]
+  },
+  "features": [
+    {
+      "id": "001",
+      "name": "product_contract",
+      "title": "Definir el contrato del producto",
+      "description": "Rellena la arquitectura y las convenciones reales. Hasta que esta feature esté done, no hay código de producto.",
+      "lane": "fast",
+      "status": "pending",
+      "acceptance": [
+        "docs/architecture.md reemplaza la línea ESTADO: plantilla por ESTADO: definido, y describe problema, usuarios, fuera de alcance y directorio de código",
+        "docs/conventions.md nombra el stack, dónde vive el código y cómo se reportan los errores",
+        "feature_list.json tiene project distinto de PENDIENTE y al menos una feature de producto además de 001",
+        "Si ya existe una forma de ejecutar el producto, scripts/verify.sh la usa; si todavía no hay código, el modo sin suite de init.sh es válido",
+        "Si el producto tiene interfaz, docs/architecture.md nombra la herramienta del recorrido de usuario; si no tiene interfaz, lo dice explícitamente",
+        "./init.sh termina en verde"
+      ]
+    }
+  ]
+}

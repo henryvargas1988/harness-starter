@@ -1,0 +1,15 @@
+---
+description: Arnés de trabajo. Una feature, verificación real, estado en disco.
+alwaysApply: true
+---
+
+# Arnés
+
+Lee `AGENTS.md` antes de editar el repositorio. El protocolo completo está en `docs/harness.md`.
+
+- Una sola feature `in_progress`.
+- Si `docs/architecture.md` dice `ESTADO: plantilla`, solo se trabaja la feature `001`.
+- Carril `sdd`: no escribas código de producto hasta que el estado sea `in_progress`. No ejecutes `./scripts/approve-spec.sh` salvo que el humano haya aprobado la spec en este chat.
+- No pongas una feature en `done` editando JSON. El cierre es `./scripts/close-feature.sh <id>`.
+- Los subagentes escriben en `progress/` o `specs/` y devuelven una ruta, no el contenido.
+- `./init.sh` en rojo: para y deja la feature `blocked` si no puedes corregirlo dentro del alcance.

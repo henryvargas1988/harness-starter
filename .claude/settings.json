@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if grep -q '^Feature en curso: ninguna' progress/current.md; then echo '[harness] sin feature activa'; else ./init.sh > /tmp/harness_init.log 2>&1 && echo '[harness] init.sh OK' || (echo '[harness] init.sh FALLÓ — no marques la feature como done' && tail -30 /tmp/harness_init.log); fi",
+            "description": "Si hay una feature en curso, obliga a pasar init.sh antes de dar la sesión por cerrada."
+          }
+        ]
+      }
+    ]
+  }
+}
